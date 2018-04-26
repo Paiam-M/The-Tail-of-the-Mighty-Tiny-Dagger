@@ -6,17 +6,18 @@ public class EnemyScript : MonoBehaviour {
 
     public float speed;
     public float startWaitTime;
-    public Transform[] moveSpots;
+    public float minX;
+    public float maxX;
 
     private Transform target;
-    private int randSpot;
+    public Transform moveSpot;
     private float waitTime;
 
 	// Use this for initialization
 	void Start ()
     {
         target = null;
-        randSpot = Random.Range(0, moveSpots.Length);
+        moveSpot.position = new Vector2(Random.Range(minX, maxX), transform.position.y);
         waitTime = startWaitTime;
     }
 	
@@ -37,12 +38,12 @@ public class EnemyScript : MonoBehaviour {
     //patrol around the platform. stop at points on the floor, and wait some time before moving again
     private void patrol()
     {
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(moveSpots[randSpot].position.x, transform.position.y), speed * Time.deltaTime);
-        if (Mathf.Abs(transform.position.x - moveSpots[randSpot].position.x) < 0.2f)
+        transform.position = Vector2.MoveTowards(transform.position, moveSpot.position, speed * Time.deltaTime);
+        if (Mathf.Abs(transform.position.x - moveSpot.position.x) < 0.2f)
         {
             if (waitTime <= 0f)
             {
-                randSpot = Random.Range(0, moveSpots.Length);                
+                moveSpot.position = new Vector2(Random.Range(minX, maxX), transform.position.y);
                 waitTime = startWaitTime;
             }
             else
