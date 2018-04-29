@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4340226066057616}
   - component: {fileID: 212032088290171064}
-  - component: {fileID: 114437545654119216}
+  - component: {fileID: 114630605774035134}
   - component: {fileID: 50216256586664398}
   - component: {fileID: 61849615110094314}
-  - component: {fileID: 61899379121488574}
+  - component: {fileID: 70361183329359894}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1653732207655732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5874186, y: 0.16926354, z: 0}
+  m_LocalPosition: {x: 18.37, y: 0.14, z: 0}
   m_LocalScale: {x: 1.1632252, y: 0.96378297, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -89,8 +89,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.27, y: 1.2}
   m_EdgeRadius: 0
---- !u!61 &61899379121488574
-BoxCollider2D:
+--- !u!70 &70361183329359894
+CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -98,23 +98,13 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15, y: 0.63}
-  m_SpriteTilingProperty:
-    border: {x: 0.20333333, y: 0.17666668, z: 0.19, w: 0.14666668}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6666666, y: 1.92}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.36, y: 0.36}
-  m_EdgeRadius: 0
---- !u!114 &114437545654119216
+  m_Offset: {x: -0.0000000072136586, y: -0.070418224}
+  m_Size: {x: 4, y: 1.5169885}
+  m_Direction: 1
+--- !u!114 &114630605774035134
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -122,14 +112,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1653732207655732}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1d9e87adb71bdb40bc1a57a0b7d6db8, type: 3}
+  m_Script: {fileID: 11500000, guid: b028638f3329ac244996139c4e27c1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 0
-  armor: 0
-  isEnemy: 0
+  speed: 2
+  startWaitTime: 1
+  minX: 12
+  maxX: 22
+  moveSpot: {fileID: 0}
   deathTimer: 2.5
   deathState: {fileID: 0}
+  health: 10
+  armor: 0
+  isEnemy: 1
 --- !u!212 &212032088290171064
 SpriteRenderer:
   m_ObjectHideFlags: 1

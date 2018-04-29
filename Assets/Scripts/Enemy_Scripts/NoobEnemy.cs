@@ -7,6 +7,8 @@ public class NoobEnemy : NPC {
     public float deathTimer = 2.5f;
     public Sprite deathState;
 
+
+
     private void Update()
     {
         if (hitPoints <= 0)

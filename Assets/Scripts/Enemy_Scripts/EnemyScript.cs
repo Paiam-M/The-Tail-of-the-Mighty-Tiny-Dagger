@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour {
 
+    [Header("Enemy Movement")]
     public float speed;
     public float startWaitTime;
     public float minX;
@@ -13,8 +14,16 @@ public class EnemyScript : MonoBehaviour {
     public Transform moveSpot;
     private float waitTime;
 
-	// Use this for initialization
-	void Start ()
+    [Header("Enemy Attributes")]
+    public float deathTimer = 2.5f;
+    public Sprite deathState;
+    public int health = 10;
+    public float armor = 0f;
+    public bool isEnemy = true;
+
+
+    // Use this for initialization
+    void Start ()
     {
         target = null;
         moveSpot.position = new Vector2(Random.Range(minX, maxX), transform.position.y);
@@ -32,7 +41,21 @@ public class EnemyScript : MonoBehaviour {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.position.x, transform.position.y), speed * Time.deltaTime);
             Debug.Log("FOLLOWING PLAYER");
         }
+        if(transform.position.y < -10)
+        {
+            StartCoroutine(Death());
+        }
+    }
 
+    //TODO: take into account armor
+    public void takeDamage(int damage)
+    {
+        health--;
+        if(health <= 0)
+        {
+            print("I died!");
+            StartCoroutine(Death());
+        }
     }
 
     //patrol around the platform. stop at points on the floor, and wait some time before moving again
@@ -69,6 +92,12 @@ public class EnemyScript : MonoBehaviour {
         {
             target = null;
         }
+    }
+
+    IEnumerator Death()
+    {
+        DestroyObject(this.gameObject);
+        yield return null;
     }
 
 }
