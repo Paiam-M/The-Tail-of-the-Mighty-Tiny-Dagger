@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\LevelManager_Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\LevelManager_Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\LevelManager_Scripts\Pause.cs" />
+     <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\NPC.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\Player_Scripts\PlayerController.cs" />
