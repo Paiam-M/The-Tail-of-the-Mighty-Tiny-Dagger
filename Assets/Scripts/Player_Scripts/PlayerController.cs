@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
-    public float speed = 10.0f;
+    public float speed = 5.0f;
     public float jumpSpeed = 300.0f;
     public LayerMask mask = -1; //used for detection of basic melee strike
 
@@ -13,11 +13,14 @@ public class PlayerController : MonoBehaviour {
     private bool grounded;
     private bool midJump;
 
+    private Animator anim;
+
     private int front = 1;  //direction player is facing
 
     private Rigidbody2D rb;
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -38,16 +41,19 @@ public class PlayerController : MonoBehaviour {
 
         rb.velocity = new Vector2(x, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
-            Jump(rb);
+            Jump(rb,jumpSpeed);
 
         if (Input.GetKeyDown(KeyCode.Space) && !grounded && !midJump)
         {
-            DoubleJump(rb);
+            Jump(rb,jumpSpeed/2);
             midJump = !midJump;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
             meleeAttack();
+
+        anim.SetFloat("walkSpeed",Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) );
+        anim.SetBool("isGrounded",grounded);
 
         //transform.Translate(x, 0, 0);
         //transform.Translate(0, y, 0);
@@ -70,13 +76,9 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void Jump(Rigidbody2D rb)
+    void Jump(Rigidbody2D rb, float jSpeed)
     {
-        rb.AddForce(Vector2.up * jumpSpeed);
+        rb.AddForce(Vector2.up * jSpeed);
     }
 
-    void DoubleJump(Rigidbody2D rb)
-    {
-        rb.AddForce(Vector2.up * (jumpSpeed / 2));
-    }
 }

@@ -20,7 +20,8 @@ public class Checkpoint : MonoBehaviour {
     {
         if (other.name == "Player")
         {
-            levelManager.currentCheckpoint = this;
+            
+            levelManager.currentCheckpoint = gameObject;
         }
     }
 
