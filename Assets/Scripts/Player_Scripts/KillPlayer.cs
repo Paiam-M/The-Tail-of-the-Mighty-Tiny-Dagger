@@ -19,7 +19,7 @@ public class KillPlayer : MonoBehaviour {
     {
         if (other.name == "Player")
         {
-            levelManager.RespawnPlayer();
+            levelManager.RespawnPlayer(); // delete later
         }
     }
 }

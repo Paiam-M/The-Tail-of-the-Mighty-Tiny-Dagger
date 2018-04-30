@@ -38,9 +38,7 @@ public class PlayerController : MonoBehaviour {
 
         rb.velocity = new Vector2(x, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
             Jump(rb);
-        }
 
         if (Input.GetKeyDown(KeyCode.Space) && !grounded && !midJump)
         {
@@ -49,9 +47,7 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
             meleeAttack();
-        }
 
         //transform.Translate(x, 0, 0);
         //transform.Translate(0, y, 0);
