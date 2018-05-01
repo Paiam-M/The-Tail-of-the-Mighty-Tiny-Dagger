@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour {
             midJump = !midJump;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
             meleeAttack();
 	}
 
