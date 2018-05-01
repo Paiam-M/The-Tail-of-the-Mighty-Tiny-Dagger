@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour {
     public LayerMask whatIsGround; //to detect what the base of the player is touching
     private bool grounded;
     private bool midJump;
-
-    private int front = 1;  //direction player is facing
+    private int faceCheck = 1;  //direction player is facing
 
     private Rigidbody2D rb;
     void Start()
@@ -33,6 +32,11 @@ public class PlayerController : MonoBehaviour {
         x *= Time.deltaTime;
         y *= Time.deltaTime;
 
+        if (x > 0)
+            faceCheck = 1;
+        if (x < 0)
+            faceCheck = -1;
+
         if (grounded)
             midJump = false;
 
@@ -48,16 +52,15 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
             meleeAttack();
-
-        //transform.Translate(x, 0, 0);
-        //transform.Translate(0, y, 0);
 	}
 
     void meleeAttack()
     {
         print("Firing.\n");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f, mask);
-        if (hit.collider.tag == ("Enemy"))
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f * faceCheck, mask);
+        if (hit.collider == null)
+            print("Miss!");
+        else if (hit.collider.tag == ("Enemy"))
         {
             NPC target = hit.collider.gameObject.GetComponent<NPC>();
             if (target.isEnemy == true)
