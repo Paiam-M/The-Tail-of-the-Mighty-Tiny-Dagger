@@ -1256,6 +1256,7 @@ Prefab:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &1388202030
 Prefab:
   m_ObjectHideFlags: 0
@@ -1308,6 +1309,8 @@ Prefab:
   m_IsPrefabParent: 0
 =======
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+>>>>>>> parent of c544395... Added Camera System
 =======
 >>>>>>> parent of c544395... Added Camera System
 --- !u!1001 &1426213229
@@ -1387,8 +1390,11 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 681ab42ff07246448bdc01ea18ef3737, type: 2}
   m_IsPrefabParent: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
+=======
+>>>>>>> parent of c544395... Added Camera System
 =======
 >>>>>>> parent of c544395... Added Camera System
 --- !u!1 &1526541498
