@@ -54,7 +54,6 @@
      <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyUI.cs" />
      <Compile Include="Assets\Scripts\Enemy_Scripts\NoobEnemy.cs" />
-     <Compile Include="Assets\Scripts\LevelManager_Scripts\CameraSystem.cs" />
      <Compile Include="Assets\Scripts\LevelManager_Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\LevelManager_Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\LevelManager_Scripts\Pause.cs" />

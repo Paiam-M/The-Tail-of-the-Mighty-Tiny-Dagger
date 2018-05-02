@@ -14,6 +14,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 43
 <<<<<<< HEAD
@@ -24,15 +25,20 @@ MonoBehaviour:
     height: 781
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
 =======
+=======
+>>>>>>> parent of c544395... Added Camera System
     x: 8
     y: 51
     width: 1344
     height: 669
+<<<<<<< HEAD
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+>>>>>>> parent of c544395... Added Camera System
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -52,6 +58,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 281
     height: 292
 =======
@@ -62,6 +69,10 @@ MonoBehaviour:
     width: 278
     height: 273
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    width: 278
+    height: 273
+>>>>>>> parent of c544395... Added Camera System
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 16}
@@ -86,6 +97,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     y: 343
@@ -113,6 +125,15 @@ MonoBehaviour:
   vertical: 0
   controlID: 192
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    y: 346
+    width: 1067
+    height: 273
+  m_MinSize: {x: 332, y: 271}
+  m_MaxSize: {x: 14002, y: 10021}
+  vertical: 0
+  controlID: 192
+>>>>>>> parent of c544395... Added Camera System
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,6 +150,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 870
     y: 0
     width: 210
@@ -137,9 +159,12 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
 =======
     x: 588
+=======
+    x: 860
+>>>>>>> parent of c544395... Added Camera System
     y: 0
-    width: 629
-    height: 328
+    width: 207
+    height: 346
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
@@ -176,6 +201,7 @@ MonoBehaviour:
     y: 30
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1360
     height: 635
   m_MinSize: {x: 677, y: 492}
@@ -192,8 +218,14 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    width: 1344
+    height: 619
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 18004, y: 14042}
+>>>>>>> parent of c544395... Added Camera System
   vertical: 0
-  controlID: 96
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,6 +242,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1080
     y: 0
     width: 280
@@ -218,9 +251,12 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
 =======
     x: 1217
+=======
+    x: 1067
+>>>>>>> parent of c544395... Added Camera System
     y: 0
-    width: 319
-    height: 731
+    width: 277
+    height: 619
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
@@ -253,6 +289,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 281
 =======
     x: 278
@@ -272,12 +309,21 @@ MonoBehaviour:
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 14}
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
+=======
+    x: 278
+    y: 0
+    width: 789
+    height: 273
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 21}
+>>>>>>> parent of c544395... Added Camera System
   m_Panes:
   - {fileID: 21}
   - {fileID: 15}
   - {fileID: 14}
-  m_Selected: 2
-  m_LastSelected: 1
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,6 +345,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1360
     height: 685
 =======
@@ -309,6 +356,10 @@ MonoBehaviour:
     width: 1344
     height: 669
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    width: 1344
+    height: 669
+>>>>>>> parent of c544395... Added Camera System
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &9
@@ -329,6 +380,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1360
 =======
     width: 1536
@@ -336,6 +388,9 @@ MonoBehaviour:
 =======
     width: 1344
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    width: 1344
+>>>>>>> parent of c544395... Added Camera System
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -357,6 +412,7 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 665
     width: 1360
 =======
@@ -367,6 +423,10 @@ MonoBehaviour:
     y: 649
     width: 1344
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    y: 649
+    width: 1344
+>>>>>>> parent of c544395... Added Camera System
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -390,6 +450,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1080
     height: 635
   m_MinSize: {x: 402, y: 492}
@@ -405,8 +466,14 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 14006, y: 14042}
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
+=======
+    width: 1067
+    height: 619
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
+>>>>>>> parent of c544395... Added Camera System
   vertical: 1
-  controlID: 97
+  controlID: 12
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -427,6 +494,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1080
     height: 343
   m_MinSize: {x: 402, y: 221}
@@ -434,6 +502,10 @@ MonoBehaviour:
 =======
     width: 1217
     height: 328
+=======
+    width: 1067
+    height: 346
+>>>>>>> parent of c544395... Added Camera System
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
@@ -444,7 +516,7 @@ MonoBehaviour:
   m_MaxSize: {x: 8006, y: 4021}
 >>>>>>> parent of c075c8e... dwaildjawdaw
   vertical: 0
-  controlID: 98
+  controlID: 13
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -463,6 +535,7 @@ MonoBehaviour:
     y: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 870
     height: 343
 =======
@@ -473,6 +546,10 @@ MonoBehaviour:
     width: 860
     height: 346
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    width: 860
+    height: 346
+>>>>>>> parent of c544395... Added Camera System
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
@@ -503,23 +580,23 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 319
-    y: 420
-    width: 896
-    height: 382
+    x: 0
+    y: 501
+    width: 992
+    height: 301
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 1107386672488844918, guid: 566a75a267f81584ab315a491f0b2b46, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.67436975
+    - e00: 0.78289473
       e01: 0
       e02: 0
-      e03: -17.369751
+      e03: -22.578949
       e10: 0
-      e11: 0.67436975
+      e11: 0.78289473
       e12: 0
-      e13: 67.62395
+      e13: 14.391449
       e20: 0
       e21: 0
       e22: 1
@@ -563,10 +640,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 319
-    y: 420
-    width: 896
-    height: 382
+    x: 0
+    y: 501
+    width: 993
+    height: 301
   m_PersistentViewDataDictionary: {fileID: 0}
   m_AnimEditor: {fileID: 0}
   m_Locked: 0
@@ -593,6 +670,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
 <<<<<<< HEAD
     y: 435
@@ -604,11 +682,16 @@ MonoBehaviour:
     height: 382
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
 =======
+=======
+>>>>>>> parent of c544395... Added Camera System
     x: 8
     y: 446
     width: 276
     height: 252
+<<<<<<< HEAD
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+>>>>>>> parent of c544395... Added Camera System
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -622,15 +705,16 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/LevelManager_Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/LevelManager_Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\lexcz\Documents\GitHub\The-Tail-of-the-Mighty-Tiny-Dagger
+  m_LastProjectPath: C:\Users\yugio_000\Desktop\Dagger Repository
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 6}
@@ -644,11 +728,16 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000a0270000aa2700000c28000000ca9a3bffffff7f
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
 =======
+=======
+>>>>>>> parent of c544395... Added Camera System
     scrollPos: {x: 0, y: 5}
     m_SelectedIDs: d4280000
     m_LastClickedID: 10452
     m_ExpandedIDs: 00000000ac280000b62800000429000000ca9a3bffffff7f
+<<<<<<< HEAD
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+>>>>>>> parent of c544395... Added Camera System
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -678,6 +767,7 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a4270000ae27000012280000
 =======
     m_ExpandedIDs: 00000000a0270000aa2700000c280000
@@ -685,6 +775,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000ac280000b628000004290000
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    m_ExpandedIDs: 00000000ac280000b628000004290000
+>>>>>>> parent of c544395... Added Camera System
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -763,6 +856,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1082
     y: 92
     width: 278
@@ -774,11 +868,16 @@ MonoBehaviour:
     height: 710
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
 =======
+=======
+>>>>>>> parent of c544395... Added Camera System
     x: 1077
     y: 100
     width: 275
     height: 598
+<<<<<<< HEAD
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+>>>>>>> parent of c544395... Added Camera System
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
@@ -809,6 +908,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     x: 872
@@ -845,20 +945,32 @@ MonoBehaviour:
     m_LastClickedID: 10722
     m_ExpandedIDs: a8faffff00000000c2290000
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    x: 870
+    y: 100
+    width: 203
+    height: 325
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: e2290000
+    m_LastClickedID: 10722
+    m_ExpandedIDs: a8faffff00000000c2290000
+>>>>>>> parent of c544395... Added Camera System
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Canvas
-      m_OriginalName: Canvas
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10516
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -890,6 +1002,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 92
 <<<<<<< HEAD
@@ -900,18 +1013,24 @@ MonoBehaviour:
     height: 307
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
 =======
+=======
+>>>>>>> parent of c544395... Added Camera System
     x: 8
     y: 100
     width: 858
     height: 325
+<<<<<<< HEAD
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+>>>>>>> parent of c544395... Added Camera System
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1179.611525317912
+  lastFramingTime: 4323.393857243246
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: 18.244759, y: 1.5607165, z: -0.3046875}
@@ -927,6 +1046,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 5.5322604, y: 3.2543764, z: -0.011256122}
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    m_Target: {x: 5.5322604, y: 3.2543764, z: -0.011256122}
+    speed: 2
+    m_Value: {x: 5.5322604, y: 3.2543764, z: -0.011256122}
+>>>>>>> parent of c544395... Added Camera System
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -956,6 +1080,7 @@ MonoBehaviour:
   m_Size:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 27.521475
     speed: 2
     m_Value: 27.521475
@@ -969,6 +1094,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 23.112335
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+    m_Target: 23.112335
+    speed: 2
+    m_Value: 23.112335
+>>>>>>> parent of c544395... Added Camera System
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1002,10 +1132,10 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 92
-    width: 586
-    height: 307
+    x: 8
+    y: 100
+    width: 858
+    height: 325
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -1015,10 +1145,10 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -293
-    m_HBaseRangeMax: 293
-    m_VBaseRangeMin: -145
-    m_VBaseRangeMax: 145
+    m_HBaseRangeMin: -429
+    m_HBaseRangeMax: 429
+    m_VBaseRangeMin: -154
+    m_VBaseRangeMax: 154
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1035,25 +1165,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 586
-      height: 290
+      width: 858
+      height: 308
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 293, y: 145}
+    m_Translation: {x: 429, y: 154}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -293
-      y: -145
-      width: 586
-      height: 290
+      x: -429
+      y: -154
+      width: 858
+      height: 308
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 586, y: 307}
+  m_LastWindowPixelSize: {x: 858, y: 325}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -1081,6 +1211,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 283
     y: 435
     width: 795
@@ -1092,9 +1223,14 @@ MonoBehaviour:
     height: 382
 >>>>>>> c544395f44dcac0f1d5b0a88a5c47d4fcf5d352b
 =======
+=======
+>>>>>>> parent of c544395... Added Camera System
     x: 288
     y: 446
     width: 785
     height: 252
+<<<<<<< HEAD
 >>>>>>> parent of c075c8e... dwaildjawdaw
+=======
+>>>>>>> parent of c544395... Added Camera System
   m_PersistentViewDataDictionary: {fileID: 0}
