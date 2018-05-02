@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : NPC
-{
+public class EnemyScript : MonoBehaviour {
 
     [Header("Enemy Movement")]
     public float speed;
     public float startWaitTime;
     public float minX;
     public float maxX;
-    public LayerMask mask;
 
     private Transform target;
     public Transform moveSpot;
@@ -19,31 +17,25 @@ public class EnemyScript : NPC
     [Header("Enemy Attributes")]
     public float deathTimer = 2.5f;
     public Sprite deathState;
-    //public int health = 10;
-    //public float armor = 0f;
-    //public bool isEnemy = true;
+    public int health = 10;
+    public float armor = 0f;
+    public bool isEnemy = true;
 
     private SpriteRenderer sRend;
 
 
     // Use this for initialization
-    void Start()
+    void Start ()
     {
-        hitPoints = 10;
-        armor = 0;
-        isEnemy = true;
         target = null;
         moveSpot.position = new Vector2(Random.Range(minX, maxX), transform.position.y);
         waitTime = startWaitTime;
         sRend = GetComponent<SpriteRenderer>();
     }
-
-    // Update is called once per frame
-    void Update()
+	
+	// Update is called once per frame
+	void Update ()
     {
-        if (hitPoints <= 0)
-            StartCoroutine(Death());
-
         //if we see player, then chase, else patrol
         if (target == null)
             patrol();
@@ -56,9 +48,20 @@ public class EnemyScript : NPC
                 sRend.flipX = false;
             Debug.Log("FOLLOWING PLAYER");
         }
-
-        if (transform.position.y < -10)
+        
+        if(transform.position.y < -10)
         {
+            StartCoroutine(Death());
+        }
+    }
+
+    //TODO: take into account armor
+    public void takeDamage(int damage)
+    {
+        health--;
+        if(health <= 0)
+        {
+            print("I died!");
             StartCoroutine(Death());
         }
     }
@@ -96,7 +99,7 @@ public class EnemyScript : NPC
     //if player has entered enemy range, set target to player
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Player")
+        if(collider.tag == "Player")
         {
             target = collider.transform;
         }
@@ -105,7 +108,7 @@ public class EnemyScript : NPC
     //if player has exited, set target to null
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.tag == "Player")
+        if(collider.tag == "Player")
         {
             target = null;
         }
@@ -113,7 +116,6 @@ public class EnemyScript : NPC
 
     IEnumerator Death()
     {
-        print("I died!");
         DestroyObject(this.gameObject);
         yield return null;
     }
