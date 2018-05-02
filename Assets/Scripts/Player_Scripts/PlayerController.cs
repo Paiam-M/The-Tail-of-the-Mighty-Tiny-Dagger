@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
         if (grounded)
             midJump = false;
-        
+
         rb.velocity = new Vector2(x, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
             Jump(rb);
