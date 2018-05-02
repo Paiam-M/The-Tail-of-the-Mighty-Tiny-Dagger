@@ -121,25 +121,7 @@ public class EnemyScript : NPC
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10 + Vector2.right * 100 * faceCheck, ForceMode2D.Force);
         }
     }
-    /*
-    //if player has entered enemy range, set target to player
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.tag == "Player")
-        {
-            target = collider.transform;
-        }
-    }
 
-    //if player has exited, set target to null
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.tag == "Player")
-        {
-            target = null;
-        }
-    }
-    */
     IEnumerator Death()
     {
         print("I died!");
