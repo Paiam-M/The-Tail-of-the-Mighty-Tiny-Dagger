@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4361538542728210}
   - component: {fileID: 61225081540964434}
-  - component: {fileID: 114217240656939964}
+  - component: {fileID: 114725196574600000}
   m_Layer: 0
   m_Name: LevelBoarder
   m_TagString: Untagged
@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 1699010345304200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.32, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 12.657507, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -66,7 +66,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114217240656939964
+--- !u!114 &114725196574600000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -74,7 +74,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1699010345304200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8602514cfb1ce47828bc64a8c188aa, type: 3}
+  m_Script: {fileID: 11500000, guid: e96574d79c1a7f44ea787ca5e85d238b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 9001
   levelManager: {fileID: 0}
