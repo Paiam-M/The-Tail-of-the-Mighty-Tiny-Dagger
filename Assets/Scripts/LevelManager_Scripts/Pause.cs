@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour {
     public GameObject PauseUI;
@@ -9,17 +10,19 @@ public class Pause : MonoBehaviour {
 
     void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
-        {
-            PauseUI.SetActive(true);
-            isPaused = !isPaused;
-            Time.timeScale = 0;
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
-        {
-            PauseUI.SetActive(false);
-            isPaused = !isPaused;
-            Time.timeScale = 1;
-        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Resume();
 	}
+
+    public void Resume()
+    {
+        PauseUI.SetActive(!isPaused);
+        isPaused = !isPaused;
+        Time.timeScale = 1;
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
