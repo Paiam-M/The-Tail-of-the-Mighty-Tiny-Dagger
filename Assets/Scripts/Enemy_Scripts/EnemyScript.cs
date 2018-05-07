@@ -101,6 +101,7 @@ public class EnemyScript : MonoBehaviour {
     {
         if(collider.tag == "Player")
         {
+            collider.GetComponent<PlayerController>().KnockbackCount = 0.2f;
             target = collider.transform;
         }
     }

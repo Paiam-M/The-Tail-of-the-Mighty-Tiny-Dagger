@@ -10,8 +10,14 @@ public class PlayerController : MonoBehaviour {
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround; //to detect what the base of the player is touching
+
     private bool grounded;
     private bool midJump;
+
+    public float KnockbackCount = 0.0f;
+    public float KnockbackPower = 5.0f;
+    public bool isFacingLeft;
+    public bool isFacingRight;
 
     private int front = 1;  //direction player is facing
 
@@ -32,7 +38,14 @@ public class PlayerController : MonoBehaviour {
         float y = Input.GetAxis("Vertical") * jumpSpeed;
         x *= Time.deltaTime;
         y *= Time.deltaTime;
-
+        if (x > 0)
+        {
+            isFacingRight = true; isFacingLeft = false;
+        }
+        else if (x < 0)
+        {
+            isFacingRight = false; isFacingLeft = true;
+        }
         if (grounded)
             midJump = false;
 
@@ -49,6 +62,24 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftShift))
             meleeAttack();
 
+        if (KnockbackCount <= 0)
+        {
+            x = Input.GetAxis("Horizontal") * speed;
+        }
+        else
+        {
+            if (isFacingRight)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-KnockbackPower, KnockbackPower);
+                KnockbackCount -= 0.1f;
+            }
+            else if (isFacingLeft)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(KnockbackPower, KnockbackPower);
+                KnockbackCount -= 0.1f;
+            }
+        }
+        
         //transform.Translate(x, 0, 0);
         //transform.Translate(0, y, 0);
 	}
@@ -79,4 +110,5 @@ public class PlayerController : MonoBehaviour {
     {
         rb.AddForce(Vector2.up * (jumpSpeed / 2));
     }
+
 }
