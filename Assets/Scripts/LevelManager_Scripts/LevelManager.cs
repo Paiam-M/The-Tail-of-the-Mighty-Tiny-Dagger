@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour {
 
     public Checkpoint currentCheckpoint;
+
     public GameObject player;
 
     private int initialHealth;
@@ -18,10 +19,6 @@ public class LevelManager : MonoBehaviour {
         initialArmor = player.GetComponent<PlayerStats>().armor;
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void RespawnPlayer()
     {

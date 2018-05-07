@@ -4,13 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Pause : MonoBehaviour {
+    public GameObject PauseUI;
+    public bool isPaused;
 
-    public Canvas Pause_UI;
-
-	void Update ()
+    void Update ()
     {
-        if (Input.GetKeyDown("Esc"))
-            Pause_UI.enabled = !Pause_UI.enabled;
-
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        {
+            PauseUI.SetActive(true);
+            isPaused = !isPaused;
+            Time.timeScale = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            PauseUI.SetActive(false);
+            isPaused = !isPaused;
+            Time.timeScale = 1;
+        }
 	}
 }

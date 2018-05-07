@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7, y: 1.25}
+  m_AnchoredPosition: {x: -1.699997, y: 1.25}
   m_SizeDelta: {x: 9.2, y: 9.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160930327
@@ -373,11 +373,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.73
+      value: -2.58
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.5120003
+      value: -4.02
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -424,11 +424,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.68
+      value: -10.735
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.5080001
+      value: -4.018
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -663,7 +663,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.5120003
+      value: -4.013
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -699,7 +699,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalScale.y
-      value: 5.55472
+      value: 7.1181855
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
@@ -824,7 +824,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.5120003
+      value: -4.02
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -866,6 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773317733}
   - component: {fileID: 773317734}
+  - component: {fileID: 773317735}
   m_Layer: 0
   m_Name: LevelBoarder_0
   m_TagString: Untagged
@@ -911,6 +912,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &773317735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773317732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96574d79c1a7f44ea787ca5e85d238b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 9001
+  player: {fileID: 0}
+  levelManager: {fileID: 1391445290}
 --- !u!4 &830719216 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d,
@@ -925,6 +940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 872508669}
   - component: {fileID: 872508670}
+  - component: {fileID: 872508671}
   m_Layer: 0
   m_Name: LevelBoarder_3
   m_TagString: Untagged
@@ -970,6 +986,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &872508671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 872508668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96574d79c1a7f44ea787ca5e85d238b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 9001
+  player: {fileID: 0}
+  levelManager: {fileID: 1391445290}
 --- !u!1 &1001124985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1119,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.5120003
+      value: -4.03
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1125,7 +1155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalScale.y
-      value: 5.55472
+      value: 7.1725016
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
@@ -1144,6 +1174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1297709654}
   - component: {fileID: 1297709655}
+  - component: {fileID: 1297709656}
   m_Layer: 0
   m_Name: LevelBoarder_2
   m_TagString: Untagged
@@ -1189,6 +1220,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1297709656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1297709653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96574d79c1a7f44ea787ca5e85d238b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 9001
+  player: {fileID: 0}
+  levelManager: {fileID: 1391445290}
 --- !u!1 &1313596258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1296,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1391445289 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1942687592931358, guid: cf412260af9809940b335073c86965f9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1809758143}
+--- !u!114 &1391445290 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114179421262638082, guid: cf412260af9809940b335073c86965f9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1809758143}
+  m_Script: {fileID: 11500000, guid: 095aa478344c73a46b770e611bd23148, type: 3}
+--- !u!114 &1391445292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1391445289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bd4fd82e8bd5c4894ecac36fa63844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseUI: {fileID: 626445347}
+  isPaused: 0
 --- !u!1001 &1642541497
 Prefab:
   m_ObjectHideFlags: 0
@@ -1260,11 +1329,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.717
+      value: -6.64
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.51
+      value: -4.019
       objectReference: {fileID: 0}
     - target: {fileID: 4076037071587842, guid: a7984615c87e83849b02480c3320cb2d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1340,6 +1409,15 @@ Prefab:
     - target: {fileID: 4048599422277860, guid: cf412260af9809940b335073c86965f9, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114179421262638082, guid: cf412260af9809940b335073c86965f9,
+        type: 2}
+      propertyPath: PauseUI
+      value: 
+      objectReference: {fileID: 626445347}
+    - target: {fileID: 1942687592931358, guid: cf412260af9809940b335073c86965f9, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf412260af9809940b335073c86965f9, type: 2}
@@ -1575,6 +1653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959208168}
   - component: {fileID: 1959208169}
+  - component: {fileID: 1959208170}
   m_Layer: 0
   m_Name: LevelBoarder_1
   m_TagString: Untagged
@@ -1620,6 +1699,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1959208170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1959208167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96574d79c1a7f44ea787ca5e85d238b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 9001
+  player: {fileID: 0}
+  levelManager: {fileID: 1391445290}
 --- !u!1 &2110545326
 GameObject:
   m_ObjectHideFlags: 0
