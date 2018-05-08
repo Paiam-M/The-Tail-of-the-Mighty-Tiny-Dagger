@@ -73,6 +73,7 @@
     <Compile Include="Assets\BenNScripts\Player_Scripts\PlayerUI.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\FlyingEnemy.cs" />
+    <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\PatrolEnemy.cs" />
     <Compile Include="Assets\Scripts\StationaryEnemy.cs" />
     <Compile Include="Assets\Scripts\TempPlayerScript.cs" />
