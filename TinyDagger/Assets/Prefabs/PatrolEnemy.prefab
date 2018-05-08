@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 61396901444816018}
   - component: {fileID: 50102186715102006}
   - component: {fileID: 70017974925011738}
-  - component: {fileID: 114322846377918636}
+  - component: {fileID: 114552958525881250}
   m_Layer: 0
-  m_Name: enemy
+  m_Name: PatrolEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1337191647347708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.68, y: -2.77, z: 0}
+  m_LocalPosition: {x: 3.39, y: -0.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,13 +57,13 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.5
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 5
 --- !u!61 &61396901444816018
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -104,7 +104,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 10, y: 2}
   m_Direction: 1
---- !u!114 &114322846377918636
+--- !u!114 &114552958525881250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -112,12 +112,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1337191647347708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d620c9d3b21b18846aff44c2ece15dbd, type: 3}
+  m_Script: {fileID: 11500000, guid: 79b81a13282133844a8b55a3e2dbec2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  moveSpots: []
-  startWaitTime: 0
+  speed: 5
+  startWaitTime: 2
+  moveSpot: {fileID: 0}
+  minX: -10
+  maxX: 10
+  health: 10
+  armor: 0
 --- !u!212 &212642965538409726
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -131,6 +135,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
