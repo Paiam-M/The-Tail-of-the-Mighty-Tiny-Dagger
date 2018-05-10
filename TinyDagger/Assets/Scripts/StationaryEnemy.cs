@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class StationaryEnemy : MonoBehaviour {
 
-    private Transform target;
+    private GameObject target;
 
     private SpriteRenderer sRend;
     public float health = 10f;
     public float armor = 0f;
     public GameObject projectile;
 
+    public float defaultFireTime = 5f;
+    private float fireTime;
+
     // Use this for initialization
     void Start ()
     {
-        target = null;
+        target = GameObject.FindGameObjectWithTag("Player");
         sRend = GetComponent<SpriteRenderer>();
+        fireTime = defaultFireTime;
 	}
 	
 	// Update is called once per frame
@@ -23,25 +27,45 @@ public class StationaryEnemy : MonoBehaviour {
     {
         if (target != null)
         {
-            if (transform.position.x < target.position.x)
+            if (transform.position.x < target.transform.position.x)
                 sRend.flipX = true;
             else
                 sRend.flipX = false;
-            //check if the player is touching the enemy
-            if (Vector2.Distance(transform.position, target.position) < 2f)
+            if(Vector2.Distance(transform.position, target.transform.position) < 10f && fireTime <= 0f)
             {
-                //player takes damage
+                Fire();
+                fireTime = defaultFireTime;
             }
+        }
+        if (fireTime >= 0)
+        {
+            fireTime -= Time.deltaTime;
         }
 	}
 
     public void takeDamage(float dmg)
     {
         health -= dmg;
+        knockBack();
         if (health <= 0)
         {
             //just die
             Destroy(gameObject);
+        }
+    }
+
+    //implement if the enemy is on edge, dont knockback off the edge. like maplestory
+    private void knockBack()
+    {
+        if (sRend.flipX)
+        {
+            Vector2 knock = new Vector2(transform.position.x - 5f, Random.Range(transform.position.y, transform.position.y + 5f));
+            transform.position = Vector2.MoveTowards(transform.position, knock, 10f);
+        }
+        else
+        {
+            Vector2 knock = new Vector2(transform.position.x + 5f, Random.Range(transform.position.y, transform.position.y + 5f));
+            transform.position = Vector2.MoveTowards(transform.position, knock, 10f);
         }
     }
 
@@ -55,16 +79,7 @@ public class StationaryEnemy : MonoBehaviour {
     {
         if (collider.tag == "Player")
         {
-            target = collider.transform;
-        }
-    }
-
-    //if player has exited, set target to null
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.tag == "Player")
-        {
-            target = null;
+            //player takes damage
         }
     }
 

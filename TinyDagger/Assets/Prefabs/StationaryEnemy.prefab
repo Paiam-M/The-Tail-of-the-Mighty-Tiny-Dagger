@@ -21,12 +21,10 @@ GameObject:
   - component: {fileID: 4893042119060258}
   - component: {fileID: 212527339888041216}
   - component: {fileID: 61661443410219744}
-  - component: {fileID: 50817136737173708}
-  - component: {fileID: 70683094664737208}
-  - component: {fileID: 114678131544195936}
+  - component: {fileID: 114228961191306326}
   m_Layer: 0
   m_Name: StationaryEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,32 +36,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081837596978200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.58, y: -3.28, z: 0}
+  m_LocalPosition: {x: 10.37, y: -3.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50817136737173708
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081837596978200}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.5
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
 --- !u!61 &61661443410219744
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -73,7 +51,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -89,22 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!70 &70683094664737208
-CapsuleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081837596978200}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 10, y: 2}
-  m_Direction: 1
---- !u!114 &114678131544195936
+--- !u!114 &114228961191306326
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -112,18 +75,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1081837596978200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d620c9d3b21b18846aff44c2ece15dbd, type: 3}
+  m_Script: {fileID: 11500000, guid: 597f48e9245439140bd9ae2df6dcede1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  startWaitTime: 1.5
-  moveSpot: {fileID: 0}
-  minX: -20
-  maxX: 20
-  minY: 0
-  maxY: 0
   health: 10
   armor: 0
+  projectile: {fileID: 1952994443058814, guid: 4ab41d27c788892458114847f7ec0ca1, type: 2}
+  defaultFireTime: 5
 --- !u!212 &212527339888041216
 SpriteRenderer:
   m_ObjectHideFlags: 1
