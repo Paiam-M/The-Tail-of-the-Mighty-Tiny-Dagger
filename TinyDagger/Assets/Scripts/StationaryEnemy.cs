@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StationaryEnemy : MonoBehaviour {
 
     private GameObject target;
 
     private SpriteRenderer sRend;
-    public float health = 10f;
-    public float armor = 0f;
+
     public GameObject projectile;
 
     public float defaultFireTime = 5f;
     private float fireTime;
+
+    //public Image healthBar;
 
     // Use this for initialization
     void Start ()
@@ -20,6 +22,7 @@ public class StationaryEnemy : MonoBehaviour {
         target = GameObject.FindGameObjectWithTag("Player");
         sRend = GetComponent<SpriteRenderer>();
         fireTime = defaultFireTime;
+        //currHealth = health;
 	}
 	
 	// Update is called once per frame
@@ -33,7 +36,7 @@ public class StationaryEnemy : MonoBehaviour {
                 sRend.flipX = false;
             if(Vector2.Distance(transform.position, target.transform.position) < 10f && fireTime <= 0f)
             {
-                Fire();
+                //Fire();
                 fireTime = defaultFireTime;
             }
         }
@@ -43,18 +46,8 @@ public class StationaryEnemy : MonoBehaviour {
         }
 	}
 
-    public void takeDamage(float dmg)
-    {
-        health -= dmg;
-        knockBack();
-        if (health <= 0)
-        {
-            //just die
-            Destroy(gameObject);
-        }
-    }
 
-    //implement if the enemy is on edge, dont knockback off the edge. like maplestory
+    //implement. if the enemy is on edge, dont knockback off the edge. like maplestory
     private void knockBack()
     {
         if (sRend.flipX)
@@ -72,15 +65,6 @@ public class StationaryEnemy : MonoBehaviour {
     private void Fire()
     {
         Instantiate(projectile, transform.position, Quaternion.identity);
-    }
-
-    //if player has entered enemy range, set target to player
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.tag == "Player")
-        {
-            //player takes damage
-        }
     }
 
 }
