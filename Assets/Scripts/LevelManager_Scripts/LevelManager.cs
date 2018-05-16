@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public Checkpoint currentCheckpoint;
-    public GameObject player;
+    public GameObject currentCheckpoint;
+    public PlayerController player;
 
 	void Start ()
     {
+        player = FindObjectOfType<PlayerController>();
     }
 	
 	// Update is called once per frame
@@ -19,7 +20,7 @@ public class LevelManager : MonoBehaviour {
 
     public void RespawnPlayer()
     {
-        SceneManager.LoadScene(0);
+        player.transform.position = currentCheckpoint.transform.position;
         Debug.Log("Player Respawn");
         //player.transform.position = currentCheckpoint.transform.position;
     }

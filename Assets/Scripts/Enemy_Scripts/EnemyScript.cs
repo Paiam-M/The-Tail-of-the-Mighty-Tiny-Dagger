@@ -92,6 +92,19 @@ public class EnemyScript : NPC {
             return true;
     }
 
+<<<<<<< HEAD
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerStats>().health -= bodyDamage;
+            collision.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            Debug.Log(Vector2.up * 10 + Vector2.right * 100 * faceCheck);
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10 + Vector2.right * 100 * faceCheck, ForceMode2D.Force);
+        }
+    }
+
+=======
     //if player has entered enemy range, set target to player
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -110,6 +123,7 @@ public class EnemyScript : NPC {
         }
     }
 
+>>>>>>> 4ad7b5b6e6ced28f8684fe9102485a8a8305dcea
     IEnumerator Death()
     {
         print("I died!");
