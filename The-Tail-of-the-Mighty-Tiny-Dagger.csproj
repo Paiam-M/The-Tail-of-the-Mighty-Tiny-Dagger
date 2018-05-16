@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A8BDE336-5814-E9F5-D235-5D8F1B855A10}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -234,9 +234,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy_Scripts\ContactDamage.cs" />
     <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\Enemy_Scripts\EnemyUI.cs" />
+    <Compile Include="Assets\Scripts\Enemy_Scripts\FireBall.cs" />
+    <Compile Include="Assets\Scripts\Enemy_Scripts\FlyingEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy_Scripts\NoobEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy_Scripts\PatrolEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy_Scripts\StationaryEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy_Scripts\TempPlayerScript.cs" />
+    <Compile Include="Assets\Scripts\LevelManager_Scripts\CameraSystem.cs" />
     <Compile Include="Assets\Scripts\LevelManager_Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\LevelManager_Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\LevelManager_Scripts\Pause.cs" />
