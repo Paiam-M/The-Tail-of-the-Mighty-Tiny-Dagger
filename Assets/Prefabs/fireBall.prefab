@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4295191194547630}
   - component: {fileID: 212637126372707466}
   - component: {fileID: 58387273533066640}
+  - component: {fileID: 114101474384575084}
   m_Layer: 0
   m_Name: fireBall
   m_TagString: Untagged
@@ -56,6 +57,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114101474384575084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1952994443058814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c2799fe5c178ce4a8971e5c654c1c33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  damage: 5
 --- !u!212 &212637126372707466
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -92,7 +106,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9262de92e910e2c4f913b292d5284aec, type: 3}
-  m_Color: {r: 1, g: 0.5694699, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
