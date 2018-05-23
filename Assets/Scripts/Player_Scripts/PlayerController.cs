@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public float speed = 10.0f;
     public float jumpSpeed = 300.0f;
-    public LayerMask mask = -1; //used for detection of basic melee strike
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -14,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     private bool grounded;
     private bool midJump;
 
-    private int front = 1;  //direction player is facing
+    public int front = 1;  //direction player is facing
 
     private Rigidbody2D rb;
     void Start()
@@ -51,29 +50,7 @@ public class PlayerController : MonoBehaviour {
             DoubleJump(rb);
             midJump = !midJump;
         }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            meleeAttack();
-
-        
 	}
-
-    BoxCollider2D meleeAttack()
-    {
-        print("Firing.\n");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * front, 3.0f, mask);
-        if (hit.collider.tag == ("Enemy"))
-        {
-            NPC target = hit.collider.gameObject.GetComponent<NPC>();
-            if (target.isEnemy == true)
-            {
-                target.takeDamage(5);
-                print("Enemy hit!");
-            }
-            else
-                print("Bonk!");
-        }
-    }
 
     void Jump(Rigidbody2D rb)
     {

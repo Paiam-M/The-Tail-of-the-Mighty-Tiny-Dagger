@@ -6,9 +6,9 @@ public class ContactDamage : MonoBehaviour {
 
     public GameObject contactSource;
     public int dmg = 20;
-    public float hitstun = 0.25f;
-    public float xkb = 15;
-    public float ykb = 4;
+    public float hitstun = 0.25f; //time (seconds) player is unable to act after getting hit
+    public float xkb = 15; //horizontal knockback
+    public float ykb = 4; //vertical knockback
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
