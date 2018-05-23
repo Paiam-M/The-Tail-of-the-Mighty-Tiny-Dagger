@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public float speed = 10.0f;
     public float jumpSpeed = 300.0f;
+    public LayerMask mask = -1; //used for detection of basic melee strike
 
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -14,7 +15,12 @@ public class PlayerController : MonoBehaviour {
     private bool midJump;
     public AudioSource jumpSFX;
 
-    public int front = 1;  //direction player is facing
+    public float KnockbackCount = 0.0f;
+    public float KnockbackPower = 5.0f;
+    public bool isFacingLeft;
+    public bool isFacingRight;
+
+    private int front = 1;  //direction player is facing
 
     private Rigidbody2D rb;
     void Start()
@@ -33,16 +39,18 @@ public class PlayerController : MonoBehaviour {
         float y = Input.GetAxis("Vertical") * jumpSpeed;
         x *= Time.deltaTime;
         y *= Time.deltaTime;
-
-        if (x < 0)
-            front = -1;
-        else
-            front = 1;
-
+        if (x > 0)
+        {
+            isFacingRight = true; isFacingLeft = false;
+        }
+        else if (x < 0)
+        {
+            isFacingRight = false; isFacingLeft = true;
+        }
         if (grounded)
             midJump = false;
 
-        rb.AddForce(new Vector2(x, 0));
+        rb.velocity = new Vector2(x, rb.velocity.y);
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
             Jump(rb);
 
@@ -51,7 +59,48 @@ public class PlayerController : MonoBehaviour {
             Jump(rb);
             midJump = !midJump;
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            meleeAttack();
+
+        if (KnockbackCount <= 0)
+        {
+            x = Input.GetAxis("Horizontal") * speed;
+        }
+        else
+        {
+            if (isFacingRight)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-KnockbackPower, KnockbackPower);
+                KnockbackCount -= 0.1f;
+            }
+            else if (isFacingLeft)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(KnockbackPower, KnockbackPower);
+                KnockbackCount -= 0.1f;
+            }
+        }
+        
+        //transform.Translate(x, 0, 0);
+        //transform.Translate(0, y, 0);
 	}
+
+    void meleeAttack()
+    {
+        print("Firing.\n");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f, mask);
+        if (hit.collider.tag == ("Enemy"))
+        {
+            NPC target = hit.collider.gameObject.GetComponent<NPC>();
+            if (target.isEnemy == true)
+            {
+                target.takeDamage(5);
+                print("Enemy hit!");
+            }
+            else
+                print("Bonk!");
+        }
+    }
 
     void Jump(Rigidbody2D rb)
     {

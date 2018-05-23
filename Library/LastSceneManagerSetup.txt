@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/TestGrid.unity
-=======
 - path: Assets/Scenes/lynLevel.unity
->>>>>>> 6d90c9d23b0a9fda00d4dfc93b2426f411e0f5bc
   isLoaded: 1
   isActive: 1

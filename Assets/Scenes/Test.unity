@@ -260,12 +260,7 @@ Prefab:
       propertyPath: moveSpot
       value: 
       objectReference: {fileID: 1644017527}
-    - target: {fileID: 1653732207655732, guid: 50e7a180d46411544ba2496e2c944a41, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114375685039813312, guid: 50e7a180d46411544ba2496e2c944a41, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50e7a180d46411544ba2496e2c944a41, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &198836220 stripped
@@ -1236,14 +1231,6 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1751274250084122, guid: 83767298533e3da4096c2f4d02f70817, type: 2}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751274250084122, guid: 83767298533e3da4096c2f4d02f70817, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83767298533e3da4096c2f4d02f70817, type: 2}
   m_IsPrefabParent: 0
@@ -1720,14 +1707,6 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1106101400886496, guid: 5cb0666f81d6eb94fb9d925955595313, type: 2}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1106101400886496, guid: 5cb0666f81d6eb94fb9d925955595313, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cb0666f81d6eb94fb9d925955595313, type: 2}
   m_IsPrefabParent: 0
@@ -1756,37 +1735,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4450644587762064, guid: 84e0200ceef092a47a716893b822f963,
     type: 2}
   m_PrefabInternal: {fileID: 871834332}
-<<<<<<< HEAD
---- !u!1 &1987198143 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1389688539090348, guid: 681ab42ff07246448bdc01ea18ef3737,
-    type: 2}
-  m_PrefabInternal: {fileID: 1426213229}
---- !u!114 &1987198144 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114154581508748866, guid: 681ab42ff07246448bdc01ea18ef3737,
-    type: 2}
-  m_PrefabInternal: {fileID: 1426213229}
-  m_Script: {fileID: 11500000, guid: c11ae59976640c7468ea2a15cbffee27, type: 3}
---- !u!114 &1987198148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1987198143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd9eee727309e674493e18e07af5a788, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1987198144}
-  damage: 10
-  range: 3
-  cdtime: 0
-  mask:
-    serializedVersion: 2
-    m_Bits: 256
-=======
 --- !u!1 &2008493447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1928,7 +1876,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
->>>>>>> 6d90c9d23b0a9fda00d4dfc93b2426f411e0f5bc
 --- !u!114 &2102909312 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114179421262638082, guid: cf412260af9809940b335073c86965f9,
