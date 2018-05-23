@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 
     private bool grounded;
     private bool midJump;
+    public AudioSource jumpSFX;
 
     public int front = 1;  //direction player is facing
 
@@ -47,19 +48,15 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && !grounded && !midJump)
         {
-            DoubleJump(rb);
+            Jump(rb);
             midJump = !midJump;
         }
 	}
 
     void Jump(Rigidbody2D rb)
     {
+        jumpSFX.Play();
         rb.AddForce(Vector2.up * jumpSpeed);
-    }
-
-    void DoubleJump(Rigidbody2D rb)
-    {
-        rb.AddForce(Vector2.up * (jumpSpeed / 2));
     }
 
 }
