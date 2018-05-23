@@ -45,6 +45,7 @@ public class PlayerHurt : MonoBehaviour
                 other.GetComponent<PlayerStats>().health -= damage;
             else
                 other.GetComponent<PlayerStats>().health = 0;
+
         }
     }
 }
