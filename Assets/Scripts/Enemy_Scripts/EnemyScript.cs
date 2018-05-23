@@ -101,7 +101,6 @@ public class EnemyScript : MonoBehaviour {
     {
         if(collider.tag == "Player")
         {
-            collider.GetComponent<PlayerController>().KnockbackCount = 0.2f;
             target = collider.transform;
         }
     }
@@ -117,7 +116,7 @@ public class EnemyScript : MonoBehaviour {
 
     IEnumerator Death()
     {
-        DestroyObject(this.gameObject);
+        Destroy(this.gameObject);
         yield return null;
     }
 

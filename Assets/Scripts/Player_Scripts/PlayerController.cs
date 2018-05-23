@@ -14,11 +14,6 @@ public class PlayerController : MonoBehaviour {
     private bool grounded;
     private bool midJump;
 
-    public float KnockbackCount = 0.0f;
-    public float KnockbackPower = 5.0f;
-    public bool isFacingLeft;
-    public bool isFacingRight;
-
     private int front = 1;  //direction player is facing
 
     private Rigidbody2D rb;
@@ -38,18 +33,16 @@ public class PlayerController : MonoBehaviour {
         float y = Input.GetAxis("Vertical") * jumpSpeed;
         x *= Time.deltaTime;
         y *= Time.deltaTime;
-        if (x > 0)
-        {
-            isFacingRight = true; isFacingLeft = false;
-        }
-        else if (x < 0)
-        {
-            isFacingRight = false; isFacingLeft = true;
-        }
+
+        if (x < 0)
+            front = -1;
+        else
+            front = 1;
+
         if (grounded)
             midJump = false;
 
-        rb.velocity = new Vector2(x, rb.velocity.y);
+        rb.AddForce(new Vector2(x, 0));
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
             Jump(rb);
 
@@ -59,35 +52,16 @@ public class PlayerController : MonoBehaviour {
             midJump = !midJump;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
             meleeAttack();
 
-        if (KnockbackCount <= 0)
-        {
-            x = Input.GetAxis("Horizontal") * speed;
-        }
-        else
-        {
-            if (isFacingRight)
-            {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(-KnockbackPower, KnockbackPower);
-                KnockbackCount -= 0.1f;
-            }
-            else if (isFacingLeft)
-            {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(KnockbackPower, KnockbackPower);
-                KnockbackCount -= 0.1f;
-            }
-        }
         
-        //transform.Translate(x, 0, 0);
-        //transform.Translate(0, y, 0);
 	}
 
-    void meleeAttack()
+    BoxCollider2D meleeAttack()
     {
         print("Firing.\n");
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f, mask);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * front, 3.0f, mask);
         if (hit.collider.tag == ("Enemy"))
         {
             NPC target = hit.collider.gameObject.GetComponent<NPC>();
