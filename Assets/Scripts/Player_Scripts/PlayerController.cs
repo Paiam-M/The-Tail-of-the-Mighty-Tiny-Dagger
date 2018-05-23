@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 
     private bool grounded;
     private bool midJump;
+    public AudioSource jumpSFX;
 
     public float KnockbackCount = 0.0f;
     public float KnockbackPower = 5.0f;
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && !grounded && !midJump)
         {
-            DoubleJump(rb);
+            Jump(rb);
             midJump = !midJump;
         }
 
@@ -103,12 +104,8 @@ public class PlayerController : MonoBehaviour {
 
     void Jump(Rigidbody2D rb)
     {
+        jumpSFX.Play();
         rb.AddForce(Vector2.up * jumpSpeed);
-    }
-
-    void DoubleJump(Rigidbody2D rb)
-    {
-        rb.AddForce(Vector2.up * (jumpSpeed / 2));
     }
 
 }
