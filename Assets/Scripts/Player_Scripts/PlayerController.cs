@@ -21,10 +21,12 @@ public class PlayerController : MonoBehaviour {
     public bool isFacingRight;
 
     private int front = 1;  //direction player is facing
+    private Animator animator;
 
     private Rigidbody2D rb;
     void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -39,11 +41,17 @@ public class PlayerController : MonoBehaviour {
         float y = Input.GetAxis("Vertical") * jumpSpeed;
         x *= Time.deltaTime;
         y *= Time.deltaTime;
-        if (x > 0)
+
+        animator.SetFloat("Speed", Mathf.Abs(x));
+        animator.SetBool("facingLeft", isFacingLeft);
+        animator.SetBool("facingRight", isFacingRight);
+        //animator.speed = Mathf.Abs(x);
+
+        if (x > 0 || Input.GetKey("d"))
         {
             isFacingRight = true; isFacingLeft = false;
         }
-        else if (x < 0)
+        else if (x < 0 || Input.GetKey("a"))
         {
             isFacingRight = false; isFacingLeft = true;
         }
@@ -51,10 +59,10 @@ public class PlayerController : MonoBehaviour {
             midJump = false;
 
         rb.velocity = new Vector2(x, rb.velocity.y);
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown("space") && grounded)
             Jump(rb);
 
-        if (Input.GetKeyDown(KeyCode.Space) && !grounded && !midJump)
+        if (Input.GetKeyDown("space") && !grounded && !midJump)
         {
             Jump(rb);
             midJump = !midJump;
