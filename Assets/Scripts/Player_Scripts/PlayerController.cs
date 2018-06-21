@@ -96,6 +96,8 @@ public class PlayerController : MonoBehaviour {
     void meleeAttack()
     {
         print("Firing.\n");
+        this.gameObject.transform.GetChild(2).GetComponent<PlayerMeleeBasic>().throwTime = gameObject.transform.GetChild(2).GetComponent<PlayerMeleeBasic>().maxThrowTime;
+        /*
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f, mask);
         if (hit.collider.tag == ("Enemy"))
         {
@@ -107,7 +109,7 @@ public class PlayerController : MonoBehaviour {
             }
             else
                 print("Bonk!");
-        }
+        }*/
     }
 
     void Jump(Rigidbody2D rb)
