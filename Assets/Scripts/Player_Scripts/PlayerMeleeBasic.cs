@@ -29,6 +29,7 @@ public class PlayerMeleeBasic : MonoBehaviour {
         PlayerController controllerComponent = player.GetComponent<PlayerController>();
         if (swingTime > 1)
         {
+            GetComponent<BoxCollider2D>().size = new Vector2(1f,1f);
             system.GetComponent<Animator>().Play("PlayerSwordSwing");
             angle += RotateSpeed * 5f;
 
@@ -46,21 +47,19 @@ public class PlayerMeleeBasic : MonoBehaviour {
         }
         else
         {
+            GetComponent<BoxCollider2D>().size = new Vector2(0.0001f, 0.0001f); ;
             system.GetComponent<Animator>().Play("PlayerNoMelee");
             originalPos = player.transform.position;
             angle = 0f;
         }
-        /*
-        if (swingTime == maxSwingTime)
-        {
-            originalPos = transform.position;
-        }
 
-        if (swingTime > 1)
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
         {
-            system.GetComponent<Animator>().Play("PlayerSwordSwing");
-            transform.position = new Vector2(originalPos.x * originalPos.x, originalPos.y * originalPos.y);
+            collision.GetComponent<EnemyHealthDmg>().takeDamage(5f);
         }
-        */
     }
 }

@@ -101,16 +101,12 @@ public class PlayerController : MonoBehaviour {
         //gameObject.transform.GetChild(2).GetComponent<PlayerShootBasic>().throwTime = gameObject.transform.GetChild(2).GetComponent<PlayerShootBasic>().maxThrowTime;
         /*
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f, mask);
-        if (hit.collider.tag == ("Enemy"))
+        if (hit.collider)
         {
-            NPC target = hit.collider.gameObject.GetComponent<NPC>();
-            if (target.isEnemy == true)
-            {
-                target.takeDamage(5);
-                print("Enemy hit!");
-            }
-            else
-                print("Bonk!");
+            EnemyHealthDmg target = hit.collider.gameObject.GetComponent<EnemyHealthDmg>();
+            target.takeDamage(5);
+            print("Enemy hit!");
+
         }*/
     }
 
