@@ -5,42 +5,62 @@ using UnityEngine;
 public class PlayerMeleeBasic : MonoBehaviour {
 
     public Animator animator;
-    public int throwTime;
-    public int maxThrowTime;
+    public int swingTime;
+    public int maxSwingTime;
     public GameObject system;
     public GameObject player;
 
-    private Vector2 originalPos;
+    private float RotateSpeed = 5f;
+    public float radius = 1f;
 
-    void Update()
+    private Vector2 originalPos;
+    private float angle;
+    private bool isActiveLeft;
+    private bool isActiveRight;
+
+    private void Start()
     {
-        if (throwTime == maxThrowTime)
+        originalPos = transform.position;
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        PlayerController controllerComponent = player.GetComponent<PlayerController>();
+        if (swingTime > 1)
         {
-            originalPos = transform.position;
-        }
-        if (throwTime > 1 && player.GetComponent<PlayerController>().isFacingRight)
-        {
-            system.GetComponent<Animator>().Play("PlayerMeleeRight");
-            transform.position = new Vector2(originalPos.x + 1, originalPos.y);
-            originalPos.x++;
-            throwTime--;
-        }
-        else if (throwTime > 1 && player.GetComponent<PlayerController>().isFacingLeft)
-        {
-            system.GetComponent<Animator>().Play("PlayerMeleeLeft");
-            transform.position = new Vector2(originalPos.x - 1, originalPos.y);
-            originalPos.x--;
-            throwTime--;
+            system.GetComponent<Animator>().Play("PlayerSwordSwing");
+            angle += RotateSpeed * 5f;
+
+            if (controllerComponent.isFacingRight)
+            {
+                var offest = new Vector2(Mathf.Cos(angle) + 0.7f * radius, Mathf.Sin(angle) + 0.3f * radius);
+                transform.position = originalPos + offest;
+            }
+            else if(controllerComponent.isFacingLeft)
+            {
+                var offest = new Vector2(-Mathf.Cos(angle) - 0.7f * radius, Mathf.Sin(angle) + 0.3f * radius);
+                transform.position = originalPos + offest;
+            }
+            swingTime--;
         }
         else
         {
-            if(player.GetComponent<PlayerController>().isFacingRight)
-                originalPos = new Vector2(player.transform.position.x + .5f, player.transform.position.y - .5f);
-            else
-                originalPos = new Vector2(player.transform.position.x - .5f, player.transform.position.y - .5f);
             system.GetComponent<Animator>().Play("PlayerNoMelee");
-            transform.position = originalPos;
-            //transform.position = originalPos;
+            originalPos = player.transform.position;
+            angle = 0f;
         }
+        /*
+        if (swingTime == maxSwingTime)
+        {
+            originalPos = transform.position;
+        }
+
+        if (swingTime > 1)
+        {
+            system.GetComponent<Animator>().Play("PlayerSwordSwing");
+            transform.position = new Vector2(originalPos.x * originalPos.x, originalPos.y * originalPos.y);
+        }
+        */
     }
 }

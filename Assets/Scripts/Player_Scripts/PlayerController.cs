@@ -95,8 +95,10 @@ public class PlayerController : MonoBehaviour {
 
     void meleeAttack()
     {
+        PlayerMeleeBasic meleeComponent = gameObject.transform.GetChild(3).GetComponent<PlayerMeleeBasic>();
         print("Firing.\n");
-        this.gameObject.transform.GetChild(2).GetComponent<PlayerMeleeBasic>().throwTime = gameObject.transform.GetChild(2).GetComponent<PlayerMeleeBasic>().maxThrowTime;
+        meleeComponent.swingTime = meleeComponent.maxSwingTime;
+        //gameObject.transform.GetChild(2).GetComponent<PlayerShootBasic>().throwTime = gameObject.transform.GetChild(2).GetComponent<PlayerShootBasic>().maxThrowTime;
         /*
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f, mask);
         if (hit.collider.tag == ("Enemy"))
