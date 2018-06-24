@@ -10,6 +10,10 @@ public class Pause : MonoBehaviour {
 
     void Update ()
     {
+        if (isPaused)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
         if (Input.GetKeyDown(KeyCode.Escape))
             Resume();
 	}
@@ -18,7 +22,6 @@ public class Pause : MonoBehaviour {
     {
         PauseUI.SetActive(!isPaused);
         isPaused = !isPaused;
-        Time.timeScale = 1;
     }
 
     public void Quit()

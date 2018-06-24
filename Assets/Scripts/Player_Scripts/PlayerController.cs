@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
@@ -37,6 +38,9 @@ public class PlayerController : MonoBehaviour {
 
 
     void Update () {
+        if (EventSystem.current.IsPointerOverGameObject())
+        { return; }
+
         float x = Input.GetAxis("Horizontal") * speed;
         float y = Input.GetAxis("Vertical") * jumpSpeed;
         x *= Time.deltaTime;
@@ -88,6 +92,11 @@ public class PlayerController : MonoBehaviour {
                 KnockbackCount -= 0.1f;
             }
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+           
+        }
         
         //transform.Translate(x, 0, 0);
         //transform.Translate(0, y, 0);
@@ -115,5 +124,4 @@ public class PlayerController : MonoBehaviour {
         jumpSFX.Play();
         rb.AddForce(Vector2.up * jumpSpeed);
     }
-
 }

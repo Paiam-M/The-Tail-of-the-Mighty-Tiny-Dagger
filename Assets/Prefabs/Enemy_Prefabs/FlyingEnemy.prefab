@@ -266,6 +266,7 @@ MonoBehaviour:
   healthBar: {fileID: 114200610378021738}
   health: 10
   armor: 0
+  damage: 5
 --- !u!212 &212093737196907468
 SpriteRenderer:
   m_ObjectHideFlags: 1
