@@ -28,7 +28,7 @@ public class NoobEnemy : NPC {
 
     IEnumerator Death()
     {
-        DestroyObject(this.gameObject);
+        Object.Destroy(gameObject);
         yield return null;
     }
 }

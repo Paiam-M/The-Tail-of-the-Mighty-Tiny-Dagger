@@ -11,7 +11,7 @@ public class Interactable : MonoBehaviour {
 
     public virtual void Interact()
     {
-        // This methos is meant to be overwritten
+        // This method is meant to be overwritten
     }
 
     private void Update()

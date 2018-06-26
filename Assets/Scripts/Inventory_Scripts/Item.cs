@@ -9,6 +9,8 @@ public class Item : ScriptableObject {
     public Sprite icon = null;
     public bool isDefaultItem = false;
 
+    public PlayerBasicAttack attackType = null;
+
     public virtual void Use()
     {
         Debug.Log("Using " + name);

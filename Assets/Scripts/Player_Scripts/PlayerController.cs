@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
     public bool isFacingLeft;
     public bool isFacingRight;
 
-    private int front = 1;  //direction player is facing
+    //private int front = 1;  //direction player is facing
     private Animator animator;
 
     private Rigidbody2D rb;
@@ -72,9 +72,6 @@ public class PlayerController : MonoBehaviour {
             midJump = !midJump;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-            meleeAttack();
-
         if (KnockbackCount <= 0)
         {
             x = Input.GetAxis("Horizontal") * speed;
@@ -92,23 +89,19 @@ public class PlayerController : MonoBehaviour {
                 KnockbackCount -= 0.1f;
             }
         }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-           
-        }
         
         //transform.Translate(x, 0, 0);
         //transform.Translate(0, y, 0);
 	}
 
+    /*
     void meleeAttack()
     {
-        PlayerMeleeBasic meleeComponent = gameObject.transform.GetChild(3).GetComponent<PlayerMeleeBasic>();
+        PlayerBasicAttack attackComponent = gameObject.transform.GetChild(3).GetComponent<PlayerMeleeBasic>();
         print("Firing.\n");
-        meleeComponent.swingTime = meleeComponent.maxSwingTime;
+        attackComponent.attackTime = attackComponent.maxAttackTime;
         //gameObject.transform.GetChild(2).GetComponent<PlayerShootBasic>().throwTime = gameObject.transform.GetChild(2).GetComponent<PlayerShootBasic>().maxThrowTime;
-        /*
+        
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 3.0f, mask);
         if (hit.collider)
         {
@@ -116,8 +109,9 @@ public class PlayerController : MonoBehaviour {
             target.takeDamage(5);
             print("Enemy hit!");
 
-        }*/
+        }
     }
+    */
 
     void Jump(Rigidbody2D rb)
     {

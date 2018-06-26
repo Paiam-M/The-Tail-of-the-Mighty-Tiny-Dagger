@@ -21,14 +21,20 @@ public class InventoryUI : MonoBehaviour {
         }
     }
 
-    private void Update()
+    /*
+    void Update()
     {
-        if (Input.GetButtonDown("Inventory"))
+        if (!inventoryUI.activeSelf)
+            Time.timeScale = 1;
+        else
+            Time.timeScale = 0;
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
     }
-
+    */
     void UpdateUI()
     {
         for (int i = 0; i < slots.Length; i++)

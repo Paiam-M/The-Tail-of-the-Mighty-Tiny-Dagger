@@ -117,7 +117,7 @@ public class EnemyScript : MonoBehaviour {
 
     IEnumerator Death()
     {
-        DestroyObject(this.gameObject);
+        Object.Destroy(gameObject);
         yield return null;
     }
 

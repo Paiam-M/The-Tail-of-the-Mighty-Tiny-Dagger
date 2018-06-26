@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Inventory_Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Inventory_Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Inventory_Scripts\Item.cs" />
+    <Compile Include="Assets\Scripts\Inventory_Scripts\ItemPickup.cs" />
     <Compile Include="Assets\Scripts\LevelManager_Scripts\CameraSystem.cs" />
     <Compile Include="Assets\Scripts\LevelManager_Scripts\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\LevelManager_Scripts\Knockback.cs" />
@@ -82,13 +83,14 @@
     <Compile Include="Assets\Scripts\LevelManager_Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\LoadScene.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
-    <Compile Include="Assets\Scripts\Player_Scripts\ItemPickup.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\KillPlayer.cs" />
+    <Compile Include="Assets\Scripts\Player_Scripts\PlayerAttack_Scripts\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Player_Scripts\PlayerAttack_Scripts\PlayerBasicAttack.cs" />
+    <Compile Include="Assets\Scripts\Player_Scripts\PlayerAttack_Scripts\PlayerMeleeBasic.cs" />
+    <Compile Include="Assets\Scripts\Player_Scripts\PlayerAttack_Scripts\PlayerShootBasic.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\PlayerHurt.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\PlayerInteract.cs" />
-    <Compile Include="Assets\Scripts\Player_Scripts\PlayerMeleeBasic.cs" />
-    <Compile Include="Assets\Scripts\Player_Scripts\PlayerShootBasic.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Player_Scripts\PlayerUI.cs" />
     <Reference Include="UnityEditor.StandardEvents">

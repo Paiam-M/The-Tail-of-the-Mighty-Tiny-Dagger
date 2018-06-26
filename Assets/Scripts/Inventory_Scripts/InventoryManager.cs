@@ -1,6 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+ * This script keeps track of the items the player has.
+ * The object that's actually containing all the items
+ * is a list called items has by default has a max 
+ * capacity of 10.
+ */
 
 public class InventoryManager : MonoBehaviour {
 
@@ -22,7 +28,7 @@ public class InventoryManager : MonoBehaviour {
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
-    public int space = 20;
+    public int space = 10;
 
     public List<Item> items = new List<Item>();
 

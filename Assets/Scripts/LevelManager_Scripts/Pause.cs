@@ -6,22 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour {
     public GameObject PauseUI;
-    public bool isPaused;
+    public GameObject InventoryUI;
 
     void Update ()
     {
-        if (isPaused)
+        if (PauseUI.activeSelf || InventoryUI.activeSelf)
             Time.timeScale = 0;
         else
             Time.timeScale = 1;
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Resume();
+
+        if (!InventoryUI.activeSelf && Input.GetButtonDown("Pause"))
+            ResumePause();
+        if (!PauseUI.activeSelf && Input.GetButtonDown("Inventory"))
+            ResumeInventory();
 	}
 
-    public void Resume()
+    public void ResumePause()
     {
-        PauseUI.SetActive(!isPaused);
-        isPaused = !isPaused;
+        PauseUI.SetActive(!PauseUI.activeSelf);
+    }
+
+    public void ResumeInventory()
+    {
+        InventoryUI.SetActive(!InventoryUI.activeSelf);
     }
 
     public void Quit()
