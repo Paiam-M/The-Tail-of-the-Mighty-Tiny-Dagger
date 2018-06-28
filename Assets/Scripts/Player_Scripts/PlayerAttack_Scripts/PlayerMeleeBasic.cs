@@ -41,7 +41,7 @@ public class PlayerMeleeBasic : PlayerBasicAttack {
         }
         else
         {
-            GetComponent<BoxCollider2D>().size = new Vector2(0.0001f, 0.0001f); ;
+            GetComponent<BoxCollider2D>().size = new Vector2(0.0001f, 0.0001f);
             system.GetComponent<Animator>().Play("PlayerNoMelee");
             originalPos = player.transform.position;
             angle = 0f;

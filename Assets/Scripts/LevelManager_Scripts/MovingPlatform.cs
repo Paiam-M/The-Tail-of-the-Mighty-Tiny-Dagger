@@ -21,8 +21,6 @@ public class MovingPlatform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        // This is the only way that I know of to stop the platform from moving 
-        // when the player pauses the game (update the two lines of code below later)
         if(!PauseUI.activeSelf && !InventoryUI.activeSelf)
             transform.position = Vector2.MoveTowards(transform.position, currentPoint, speed);
 

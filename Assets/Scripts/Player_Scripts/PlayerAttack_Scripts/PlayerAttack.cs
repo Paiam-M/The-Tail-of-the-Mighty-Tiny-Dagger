@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour {
 
     public PlayerBasicAttack currentAttackType;
+    public GameObject pauseUI;
+    public GameObject inventoryUI;
 
     void Update()
     {
-        if (Input.GetButtonDown("Attack"))
+        if (!pauseUI.activeSelf && !inventoryUI.activeSelf && Input.GetButtonDown("Attack"))
         {
             Attack();
         }

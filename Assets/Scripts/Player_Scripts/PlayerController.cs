@@ -24,9 +24,16 @@ public class PlayerController : MonoBehaviour {
     //private int front = 1;  //direction player is facing
     private Animator animator;
 
+    private GameObject pauseUI;
+    private GameObject inventoryUI;
+
     private Rigidbody2D rb;
+
     void Start()
     {
+        pauseUI = GameObject.Find("PauseCanvas");
+        inventoryUI = GameObject.Find("InventoryCanvas");
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -38,9 +45,10 @@ public class PlayerController : MonoBehaviour {
 
 
     void Update () {
+        /*
         if (EventSystem.current.IsPointerOverGameObject())
         { return; }
-
+        */
         float x = Input.GetAxis("Horizontal") * speed;
         float y = Input.GetAxis("Vertical") * jumpSpeed;
         x *= Time.deltaTime;
@@ -59,16 +67,17 @@ public class PlayerController : MonoBehaviour {
         {
             isFacingRight = false; isFacingLeft = true;
         }
+
         if (grounded)
             midJump = false;
 
         rb.velocity = new Vector2(x, rb.velocity.y);
-        if (Input.GetKeyDown("space") && grounded)
-            Jump(rb);
+        if (!pauseUI && !inventoryUI && Input.GetButtonDown("Jump") && grounded)
+            Jump(rb, jumpSpeed);
 
-        if (Input.GetKeyDown("space") && !grounded && !midJump)
+        if (!pauseUI && !inventoryUI && Input.GetButtonDown("Jump") && !grounded && !midJump)
         {
-            Jump(rb);
+            Jump(rb, (jumpSpeed / 1.5f));
             midJump = !midJump;
         }
 
@@ -89,9 +98,6 @@ public class PlayerController : MonoBehaviour {
                 KnockbackCount -= 0.1f;
             }
         }
-        
-        //transform.Translate(x, 0, 0);
-        //transform.Translate(0, y, 0);
 	}
 
     /*
@@ -113,9 +119,9 @@ public class PlayerController : MonoBehaviour {
     }
     */
 
-    void Jump(Rigidbody2D rb)
+    void Jump(Rigidbody2D rb, float jSpeed)
     {
         jumpSFX.Play();
-        rb.AddForce(Vector2.up * jumpSpeed);
+        rb.AddForce(Vector2.up * jSpeed);
     }
 }

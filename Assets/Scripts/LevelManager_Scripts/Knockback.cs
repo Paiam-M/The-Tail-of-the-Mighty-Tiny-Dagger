@@ -7,15 +7,23 @@ public class Knockback : MonoBehaviour {
     public GameObject player;
     public float power;
 
-    private int time;
-	
-	// Update is called once per frame
-	void Update ()
+    public int time;
+    private Vector2 currentCounterDirection;
+
+    private void Start()
     {
+        player = GameObject.Find("Player");
+    }
+
+    void Update ()
+    {
+        if (time == 5)
+            currentCounterDirection = -player.GetComponent<Rigidbody2D>().velocity;
+
         if (time > 0)
         {
             Debug.Log("Hit");
-            player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * power);
+            player.GetComponent<Rigidbody2D>().AddForce(currentCounterDirection * power);
             time--;
         }
 	}

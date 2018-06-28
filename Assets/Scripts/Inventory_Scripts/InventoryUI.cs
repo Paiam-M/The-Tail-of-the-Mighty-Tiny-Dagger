@@ -14,6 +14,8 @@ public class InventoryUI : MonoBehaviour {
         inventory = InventoryManager.instance;
         inventory.onItemChangedCallback += UpdateUI;
 
+        //itemsParent = GameObject.Find("InventoryCanvas").transform.GetChild(0).transform.GetChild(0).transform;
+
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
         for (int i = 0; i < slots.Length; i++)
         {

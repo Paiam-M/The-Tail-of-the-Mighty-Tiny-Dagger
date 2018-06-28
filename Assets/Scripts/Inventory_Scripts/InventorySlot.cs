@@ -9,6 +9,11 @@ public class InventorySlot : MonoBehaviour {
     public PlayerAttack playerAttack;
     public PlayerBasicAttack attack;
 
+    void Start()
+    {
+        playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
+    }
+
     public void AddItem(Item newItem)
     {
         item = newItem;

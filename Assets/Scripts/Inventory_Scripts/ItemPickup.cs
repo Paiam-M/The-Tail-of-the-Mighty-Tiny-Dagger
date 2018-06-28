@@ -16,6 +16,7 @@ public class ItemPickup : Interactable {
 
     private void Start()
     {
+        player = GameObject.Find("Player");
         item.attackType = attackType;
     }
 
